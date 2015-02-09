@@ -7,12 +7,12 @@
 Summary:	PHP C extension for JSON serialization
 Summary(pl.UTF-8):	Rozszerzenie C PHP dla serializacji JSON
 Name:		%{php_name}-pecl-%{modname}
-Version:	1.3.5
+Version:	1.3.6
 Release:	1
 License:	PHP 3.01
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
-# Source0-md5:	85564b6f5c2e03063f39be54d881e89a
+# Source0-md5:	65891642a4a0214bbe77e1b208cdd607
 URL:		https://github.com/remicollet/pecl-json-c
 %{?with_tests:BuildRequires:    %{php_name}-cli}
 BuildRequires:	%{php_name}-devel
