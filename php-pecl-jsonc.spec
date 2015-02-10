@@ -14,9 +14,12 @@ Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 # Source0-md5:	65891642a4a0214bbe77e1b208cdd607
 URL:		https://github.com/remicollet/pecl-json-c
-%{?with_tests:BuildRequires:    %{php_name}-cli}
 BuildRequires:	%{php_name}-devel
 BuildRequires:	rpmbuild(macros) >= 1.666
+%if %{with tests}
+BuildRequires:	%{php_name}-cli
+BuildRequires:	%{php_name}-pcre
+%endif
 Provides:	php(json) = %{version}
 Obsoletes:	php-pecl-json < %{version}
 %{?requires_php_extension}
